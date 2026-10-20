@@ -1,0 +1,1918 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Binh Hung Industrial - Chuyên sản xuất, phân phối và gia công theo yêu cầu: Dây Bện Đồng tiếp địa, Lưới Inox kỹ thuật, Đồng Mạ dẫn điện chất lượng cao.">
+  <title>Binh Hung Industrial | Dây Bện Đồng · Lưới Inox · Đồng Mạ - Gia Công Theo Yêu Cầu</title>
+  <style>
+    :root {
+      --navy: #0e2238;
+      --navy-light: #163659;
+      --navy-dark: #091624;
+      --copper: #d9651a;
+      --copper-hover: #b84e0e;
+      --copper-soft: #fff3ea;
+      --copper-glow: rgba(217, 101, 26, 0.22);
+      --steel: #4b6584;
+      --steel-light: #e6ecf2;
+      --ink: #18283b;
+      --muted: #64748b;
+      --line: #e2e8f0;
+      --surface: #f8fafc;
+      --white: #ffffff;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --shadow-sm: 0 4px 12px rgba(14, 34, 56, 0.05);
+      --shadow-md: 0 10px 25px rgba(14, 34, 56, 0.08);
+      --shadow-lg: 0 20px 40px rgba(14, 34, 56, 0.12);
+      --transition: all 0.2s ease-in-out;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    button, input, select, textarea { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+
+    .container {
+      width: min(1200px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    /* Topbar */
+    .topbar {
+      background: var(--navy-dark);
+      color: #cbd5e1;
+      font-size: 12.5px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      gap: 16px;
+    }
+    .topbar-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #fed7aa;
+      font-weight: 600;
+    }
+    .topbar-contact {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .topbar-contact a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #e2e8f0;
+      transition: var(--transition);
+    }
+    .topbar-contact a:hover { color: #fb923c; }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+    .header-main {
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 260px;
+    }
+    .brand-mark {
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      color: white;
+      font-weight: 900;
+      font-size: 19px;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #ea580c, #c2410c);
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(234, 88, 12, 0.35);
+    }
+    .brand-text { display: flex; flex-direction: column; }
+    .brand-name {
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: 0.3px;
+      color: var(--navy);
+      line-height: 1.2;
+    }
+    .brand-sub {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--muted);
+      letter-spacing: 1px;
+      margin-top: 2px;
+    }
+
+    /* Search */
+    .search-box {
+      display: flex;
+      flex: 1;
+      max-width: 440px;
+      height: 44px;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 10px;
+      background: #f8fafc;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .search-box:focus-within {
+      border-color: var(--copper);
+      background: white;
+      box-shadow: 0 0 0 3px var(--copper-glow);
+    }
+    .search-box input {
+      flex: 1;
+      border: 0;
+      outline: 0;
+      padding: 0 14px;
+      font-size: 13.5px;
+      background: transparent;
+      color: var(--ink);
+    }
+    .search-box button {
+      width: 48px;
+      border: 0;
+      background: var(--copper);
+      color: white;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      transition: var(--transition);
+    }
+    .search-box button:hover { background: var(--copper-hover); }
+
+    /* Header Actions */
+    .header-quick-info {
+      margin-left: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      text-align: right;
+    }
+    .header-quick-info small { font-size: 11px; color: var(--muted); font-weight: 500; }
+    .header-quick-info strong { font-size: 14px; color: var(--navy); font-weight: 800; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 42px;
+      padding: 0 18px;
+      border-radius: 9px;
+      font-size: 13.5px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition);
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+    .btn-copper {
+      background: var(--copper);
+      color: white;
+      box-shadow: 0 4px 14px rgba(217, 101, 26, 0.25);
+    }
+    .btn-copper:hover {
+      background: var(--copper-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(217, 101, 26, 0.35);
+    }
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.3);
+      color: white;
+    }
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.22);
+      border-color: white;
+    }
+    .btn-outline {
+      background: white;
+      border-color: #cbd5e1;
+      color: var(--navy);
+    }
+    .btn-outline:hover {
+      border-color: var(--copper);
+      color: var(--copper);
+      background: var(--copper-soft);
+    }
+    .mobile-toggle {
+      display: none;
+      border: 1px solid var(--line);
+      background: white;
+      border-radius: 8px;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+
+    /* Nav Bar */
+    .nav {
+      border-top: 1px solid var(--line);
+      background: white;
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      min-height: 46px;
+    }
+    .nav a {
+      font-size: 13px;
+      font-weight: 700;
+      color: #334155;
+      position: relative;
+      padding: 12px 0;
+      transition: var(--transition);
+    }
+    .nav a:hover, .nav a.active {
+      color: var(--copper);
+    }
+    .nav a.highlight-nav {
+      color: var(--copper);
+      font-weight: 800;
+      margin-left: auto;
+    }
+
+    /* Hero Section */
+    .hero-wrap {
+      padding: 32px 0 24px;
+      background: linear-gradient(180deg, #f1f5f9 0%, #ffffff 100%);
+    }
+    .hero-card {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      min-height: 420px;
+      border-radius: var(--radius-lg);
+      background: radial-gradient(circle at 10% 20%, #1e3a5f, var(--navy));
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+      color: white;
+    }
+    .hero-content {
+      padding: clamp(32px, 5vw, 60px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      position: relative;
+      z-index: 2;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border-radius: 20px;
+      background: rgba(251, 146, 60, 0.15);
+      border: 1px solid rgba(251, 146, 60, 0.35);
+      color: #fed7aa;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .hero-content h1 {
+      font-size: clamp(32px, 4.2vw, 48px);
+      line-height: 1.15;
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 16px;
+    }
+    .hero-content h1 span {
+      background: linear-gradient(90deg, #fb923c, #fdba74);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-content p {
+      color: #cbd5e1;
+      font-size: 15px;
+      max-width: 520px;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 26px;
+    }
+    .hero-badge-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: #e2e8f0;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 5px 11px;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    .hero-badge-item svg { color: #fb923c; }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* Hero Visual Card */
+    .hero-visual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      position: relative;
+      background:
+        radial-gradient(circle at 70% 30%, rgba(217, 101, 26, 0.18), transparent 60%),
+        linear-gradient(135deg, rgba(14, 34, 56, 0.4), rgba(9, 22, 36, 0.8));
+    }
+    .spec-glass-card {
+      width: min(100%, 360px);
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+      transform: rotate(-2deg);
+      transition: transform 0.3s ease;
+    }
+    .spec-glass-card:hover { transform: rotate(0deg) scale(1.02); }
+    .spec-card-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+      font-size: 11px;
+      color: #cbd5e1;
+      letter-spacing: 0.5px;
+    }
+    .spec-card-head .status-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 8px #22c55e;
+      margin-right: 4px;
+    }
+    .spec-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+      font-size: 12.5px;
+    }
+    .spec-item span:first-child { color: #94a3b8; }
+    .spec-item span:last-child { color: #ffffff; font-weight: 700; }
+    .spec-card-tag {
+      margin-top: 18px;
+      background: linear-gradient(90deg, #ea580c, #c2410c);
+      padding: 10px;
+      text-align: center;
+      border-radius: 8px;
+      font-size: 11.5px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      color: white;
+    }
+
+    /* Trust Row */
+    .trust-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .trust-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 18px;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+    .trust-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      border-color: #fdba74;
+    }
+    .trust-icon {
+      width: 44px;
+      height: 44px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: var(--copper-soft);
+      color: var(--copper);
+    }
+    .trust-card h4 {
+      font-size: 13.5px;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.3;
+      margin-bottom: 3px;
+    }
+    .trust-card p {
+      font-size: 11.5px;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+
+    /* Section Styles */
+    section { padding: 56px 0; }
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 28px;
+      gap: 20px;
+    }
+    .section-kicker {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--copper);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 6px;
+    }
+    .section-title {
+      font-size: clamp(24px, 3.2vw, 32px);
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.25;
+      letter-spacing: -0.5px;
+    }
+    .section-desc {
+      font-size: 13.5px;
+      color: var(--muted);
+      max-width: 500px;
+    }
+
+    /* Category Cards */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+    .category-card {
+      display: flex;
+      flex-direction: column;
+      padding: 22px;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      cursor: pointer;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .category-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: transparent;
+      transition: var(--transition);
+    }
+    .category-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: #fed7aa;
+    }
+    .category-card:hover::before, .category-card.active::before {
+      background: var(--copper);
+    }
+    .category-icon-wrap {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      background: #f1f5f9;
+      display: grid;
+      place-items: center;
+      color: var(--navy);
+      margin-bottom: 16px;
+      transition: var(--transition);
+    }
+    .category-card:hover .category-icon-wrap {
+      background: var(--copper-soft);
+      color: var(--copper);
+    }
+    .category-card h3 {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .category-card p {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.5;
+      margin-bottom: 14px;
+    }
+    .category-link {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--copper);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: auto;
+    }
+
+    /* Products Section */
+    .products-section { background: var(--surface); }
+    .filter-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+    .filter-btn {
+      padding: 8px 16px;
+      border-radius: 20px;
+      border: 1px solid var(--line);
+      background: white;
+      color: var(--muted);
+      font-size: 12.5px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .filter-btn:hover { border-color: var(--copper); color: var(--copper); }
+    .filter-btn.active {
+      background: var(--navy);
+      border-color: var(--navy);
+      color: white;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+    .product-card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: #fed7aa;
+    }
+    .product-visual {
+      height: 170px;
+      background: linear-gradient(135deg, #e2e8f0 0%, #f1f5f9 100%);
+      display: grid;
+      place-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .product-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 9.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      background: white;
+      color: var(--navy);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+    .product-badge.copper-badge {
+      background: var(--copper-soft);
+      color: var(--copper-hover);
+    }
+    .product-badge.inox-badge {
+      background: #eff6ff;
+      color: #1d4ed8;
+    }
+    .product-graphic {
+      width: 72px;
+      height: 72px;
+      color: var(--navy-light);
+      transition: transform 0.3s ease;
+    }
+    .product-card:hover .product-graphic { transform: scale(1.08); }
+    .product-body {
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .product-cat-name {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: var(--copper);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+    .product-title {
+      font-size: 14.5px;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.4;
+      margin-bottom: 8px;
+      min-height: 40px;
+    }
+    .product-desc {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.5;
+      margin-bottom: 14px;
+      flex: 1;
+    }
+    .product-specs {
+      background: #f8fafc;
+      border-radius: 6px;
+      padding: 8px 10px;
+      font-size: 11px;
+      color: #475569;
+      margin-bottom: 14px;
+      border: 1px dashed #e2e8f0;
+    }
+    .product-specs strong { color: var(--navy); }
+    .product-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+    }
+    .price-callout {
+      font-size: 11.5px;
+      font-weight: 800;
+      color: var(--copper);
+    }
+    .btn-card-action {
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 11.5px;
+      font-weight: 700;
+      border: 1px solid #cbd5e1;
+      background: white;
+      color: var(--navy);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .btn-card-action:hover {
+      background: var(--copper);
+      color: white;
+      border-color: var(--copper);
+    }
+
+    /* Custom Manufacturing Section */
+    .custom-section {
+      background: linear-gradient(135deg, var(--navy) 0%, #152e4a 100%);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    .custom-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .custom-info h2 {
+      font-size: clamp(26px, 3.5vw, 36px);
+      font-weight: 800;
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+    .custom-info h2 span { color: #fb923c; }
+    .custom-info p {
+      color: #cbd5e1;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    .custom-steps {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .step-box {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 10px;
+      padding: 14px;
+    }
+    .step-num {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--copper);
+      color: white;
+      font-size: 11px;
+      font-weight: 900;
+      text-align: center;
+      line-height: 24px;
+      margin-bottom: 8px;
+    }
+    .step-box h4 { font-size: 13px; font-weight: 800; color: white; margin-bottom: 4px; }
+    .step-box p { font-size: 11.5px; color: #94a3b8; margin: 0; }
+
+    /* RFQ Quotation Form Section */
+    .rfq-section { background: #f1f5f9; }
+    .rfq-container {
+      display: grid;
+      grid-template-columns: 1fr 1.25fr;
+      gap: 40px;
+      background: white;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+      border: 1px solid var(--line);
+    }
+    .rfq-side-info {
+      background: var(--navy);
+      color: white;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .rfq-side-info h3 {
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+    .rfq-side-info p {
+      font-size: 13.5px;
+      color: #cbd5e1;
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+    .rfq-benefit-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 30px;
+    }
+    .rfq-benefit-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: #e2e8f0;
+    }
+    .rfq-benefit-item svg { color: #fb923c; flex-shrink: 0; }
+    .rfq-direct-hotline {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      padding: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .rfq-direct-hotline small { font-size: 11px; color: #94a3b8; display: block; }
+    .rfq-direct-hotline strong { font-size: 16px; color: #fb923c; display: block; margin-top: 4px; }
+
+    .rfq-form-wrap {
+      padding: 40px;
+    }
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .form-group.col-span-2 { grid-column: span 2; }
+    .form-group label {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--navy);
+    }
+    .form-group label span { color: #dc2626; }
+    .form-control {
+      width: 100%;
+      height: 42px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 0 12px;
+      font-size: 13px;
+      outline: 0;
+      background: #f8fafc;
+      transition: var(--transition);
+    }
+    textarea.form-control {
+      height: 90px;
+      padding: 10px 12px;
+      resize: vertical;
+    }
+    .form-control:focus {
+      border-color: var(--copper);
+      background: white;
+      box-shadow: 0 0 0 3px var(--copper-glow);
+    }
+
+    /* Modal */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(14, 34, 56, 0.7);
+      backdrop-filter: blur(4px);
+      z-index: 100;
+      display: none;
+      place-items: center;
+      padding: 20px;
+    }
+    .modal-backdrop.is-active { display: grid; }
+    .modal-box {
+      width: min(100%, 580px);
+      background: white;
+      border-radius: var(--radius-md);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+      overflow: hidden;
+      animation: modalFadeIn 0.25s ease-out;
+    }
+    @keyframes modalFadeIn {
+      from { opacity: 0; transform: translateY(16px) scale(0.98); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .modal-header {
+      padding: 18px 24px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f8fafc;
+    }
+    .modal-header h3 { font-size: 16px; font-weight: 800; color: var(--navy); }
+    .modal-close {
+      border: 0;
+      background: transparent;
+      font-size: 20px;
+      cursor: pointer;
+      color: var(--muted);
+      width: 32px;
+      height: 32px;
+      display: grid;
+      place-items: center;
+      border-radius: 6px;
+    }
+    .modal-close:hover { background: #e2e8f0; color: var(--navy); }
+    .modal-body {
+      padding: 24px;
+      max-height: 70vh;
+      overflow-y: auto;
+    }
+    .modal-specs-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 12.5px;
+    }
+    .modal-specs-table th, .modal-specs-table td {
+      border: 1px solid var(--line);
+      padding: 10px 12px;
+      text-align: left;
+    }
+    .modal-specs-table th {
+      background: #f1f5f9;
+      color: var(--navy);
+      font-weight: 800;
+      width: 35%;
+    }
+    .modal-footer {
+      padding: 16px 24px;
+      background: #f8fafc;
+      border-top: 1px solid var(--line);
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+    }
+
+    /* Floating Contact Pill */
+    .floating-contact {
+      position: fixed;
+      right: 20px;
+      bottom: 24px;
+      z-index: 40;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .float-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 800;
+      color: white;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+      transition: var(--transition);
+      cursor: pointer;
+    }
+    .float-btn:hover { transform: translateY(-3px) scale(1.02); }
+    .float-zalo { background: #0068ff; }
+    .float-hotline { background: #ea580c; }
+
+    /* Footer */
+    footer {
+      background: var(--navy-dark);
+      color: #cbd5e1;
+      padding: 50px 0 24px;
+      font-size: 13px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 36px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .footer-brand .brand-name { color: white; }
+    .footer-brand .brand-sub { color: #94a3b8; }
+    .footer-about {
+      margin-top: 14px;
+      font-size: 12.5px;
+      color: #94a3b8;
+      line-height: 1.6;
+      max-width: 320px;
+    }
+    .footer-col h4 {
+      font-size: 13.5px;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 16px;
+      letter-spacing: 0.5px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col a { color: #94a3b8; transition: var(--transition); }
+    .footer-col a:hover { color: #fb923c; padding-left: 2px; }
+    .copyright {
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11.5px;
+      color: #64748b;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .hero-card { grid-template-columns: 1fr; }
+      .hero-visual { display: none; }
+      .trust-row { grid-template-columns: repeat(2, 1fr); }
+      .category-grid, .product-grid { grid-template-columns: repeat(2, 1fr); }
+      .custom-inner { grid-template-columns: 1fr; }
+      .rfq-container { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .topbar { display: none; }
+      .header-main { min-height: 70px; gap: 14px; }
+      .search-box { display: none; }
+      .header-quick-info { display: none; }
+      .mobile-toggle { display: block; margin-left: auto; }
+      .nav { display: none; }
+      .nav.is-open { display: block; }
+      .nav-inner { flex-direction: column; align-items: flex-start; gap: 0; padding: 10px 0; }
+      .nav a { width: 100%; border-bottom: 1px solid var(--line); padding: 10px 0; }
+      .trust-row { grid-template-columns: 1fr; }
+      .category-grid, .product-grid { grid-template-columns: 1fr; }
+      .custom-steps { grid-template-columns: 1fr; }
+      .form-grid { grid-template-columns: 1fr; }
+      .form-group.col-span-2 { grid-column: span 1; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .copyright { flex-direction: column; gap: 8px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Gia công theo quy cách, kích thước & bản vẽ kỹ thuật theo yêu cầu
+      </div>
+      <div class="topbar-contact">
+        <a href="tel:0900000000">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Hotline: 090x.xxx.xxx
+        </a>
+        <a href="#bao-gia">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          kinhdoanh@binhhungindustrial.com
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-main">
+      <a class="brand" href="#" aria-label="Binh Hung Industrial">
+        <div class="brand-mark">BH</div>
+        <div class="brand-text">
+          <span class="brand-name">BINH HUNG INDUSTRIAL</span>
+          <span class="brand-sub">DÂY BỆN ĐỒNG · LƯỚI INOX · ĐỒNG MẠ</span>
+        </div>
+      </a>
+
+      <!-- Quick Search Bar -->
+      <form class="search-box" id="searchForm" role="search">
+        <input id="searchInput" type="search" placeholder="Tìm dây đồng bện, lưới inox 304, mạ thiếc..." aria-label="Tìm kiếm">
+        <button type="submit" aria-label="Tìm kiếm">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </form>
+
+      <div class="header-quick-info">
+        <small>Tư vấn kỹ thuật & báo giá</small>
+        <strong>Làm theo đúng yêu cầu</strong>
+      </div>
+
+      <a class="btn btn-copper" href="#bao-gia">Gửi Yêu Cầu Báo Giá ↗</a>
+      <button class="mobile-toggle" id="mobileToggle" aria-expanded="false" aria-label="Mở menu">☰</button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="mainNav">
+      <div class="container nav-inner">
+        <a href="#danh-muc" class="active">DANH MỤC SẢN PHẨM</a>
+        <a href="#san-pham">SẢN PHẨM NỔI BẬT</a>
+        <a href="#gia-cong">GIA CÔNG THEO BẢN VẼ</a>
+        <a href="#loi-the">VÌ SAO CHỌN BÌNH HƯNG</a>
+        <a class="highlight-nav" href="#bao-gia">NHẬN BÁO GIÁ NHANH →</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <div class="hero-wrap">
+      <div class="container">
+        <div class="hero-card">
+          <div class="hero-content">
+            <div class="eyebrow">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              Đối tác vật tư kim khí công nghiệp tin cậy
+            </div>
+            <h1>Đúng vật tư.<br><span>Vững vận hành.</span></h1>
+            <p>
+              Chuyên cung cấp và gia công chuyên sâu <strong>Dây Bện Đồng</strong> tiếp địa & chống sét, <strong>Lưới Inox kỹ thuật</strong> lọc bụi/hóa chất, và <strong>Đồng Mạ dẫn điện</strong> cho tủ bảng điện, nhà máy, công trình.
+            </p>
+
+            <div class="hero-badges">
+              <div class="hero-badge-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Đồng đỏ Cu 99.9%
+              </div>
+              <div class="hero-badge-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Inox SUS 304 / 316 chuẩn mác
+              </div>
+              <div class="hero-badge-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Gia công ép cosse theo bản vẽ
+              </div>
+            </div>
+
+            <div class="hero-actions">
+              <a class="btn btn-copper" href="#san-pham">Khám Phá Sản Phẩm ↓</a>
+              <a class="btn btn-secondary" href="#bao-gia">Gửi Yêu Cầu Báo Giá</a>
+            </div>
+          </div>
+
+          <!-- Hero Visual Specification Box -->
+          <div class="hero-visual">
+            <div class="spec-glass-card">
+              <div class="spec-card-head">
+                <span><span class="status-dot"></span>TIÊU CHUẨN XUẤT XƯỞNG</span>
+                <span>ISO 9001:2015</span>
+              </div>
+              <div class="spec-item">
+                <span>Vật liệu lõi:</span>
+                <span>Đồng nguyên chất Cu 99.9%</span>
+              </div>
+              <div class="spec-item">
+                <span>Tiết diện dây bện:</span>
+                <span>4mm² - 250mm² (Gia công tùy chọn)</span>
+              </div>
+              <div class="spec-item">
+                <span>Lớp xử lý mạ:</span>
+                <span>Mạ thiếc / Mạ bạc chống oxy hóa</span>
+              </div>
+              <div class="spec-item">
+                <span>Lưới Inox:</span>
+                <span>Lưới dệt & hàn SUS 304, 316</span>
+              </div>
+              <div class="spec-item">
+                <span>Gia công cơ khí:</span>
+                <span>Ép cosse thủy lực, đột lỗ theo bản vẽ</span>
+              </div>
+              <div class="spec-card-tag">
+                SẢN XUẤT & GIA CÔNG CHÍNH XÁC
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trust Row (Lợi Thế Cạnh Tranh) -->
+        <div class="trust-row" id="loi-the">
+          <div class="trust-card">
+            <div class="trust-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <div>
+              <h4>Làm theo đúng yêu cầu</h4>
+              <p>Gia công đúng tiết diện, kích thước, đột lỗ theo bản vẽ thiết kế kỹ thuật.</p>
+            </div>
+          </div>
+
+          <div class="trust-card">
+            <div class="trust-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            </div>
+            <div>
+              <h4>Danh mục đa dạng</h4>
+              <p>Đầy đủ quy cách dây bện trần/mạ, các cỡ mesh lưới inox và đồng thanh mạ.</p>
+            </div>
+          </div>
+
+          <div class="trust-card">
+            <div class="trust-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <div>
+              <h4>Báo giá minh bạch</h4>
+              <p>Chi phí trực tiếp từ xưởng, chiết khấu tối ưu theo số lượng và hợp đồng.</p>
+            </div>
+          </div>
+
+          <div class="trust-card">
+            <div class="trust-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7.5" r="4"/><polyline points="17 11 19 13 23 9"/></svg>
+            </div>
+            <div>
+              <h4>Hỗ trợ doanh nghiệp</h4>
+              <p>Cung cấp CO/CQ, hóa đơn VAT, cam kết tiến độ cho các công trình lớn.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Core Categories -->
+    <section id="danh-muc">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-kicker">Lĩnh vực trọng tâm</span>
+            <h2 class="section-title">Danh mục sản phẩm chính</h2>
+          </div>
+          <p class="section-desc">Cung ứng nhanh các nhóm vật tư dẫn điện, chống sét tiếp địa và lọc tách công nghiệp tiêu chuẩn.</p>
+        </div>
+
+        <div class="category-grid">
+          <div class="category-card" onclick="filterByCategory('day-ben-dong')">
+            <div class="category-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
+            </div>
+            <h3>Dây Bện Đồng</h3>
+            <p>Dây đồng bện trần tiếp địa, thanh cái đồng mềm ép cosse hai đầu, dây bện đồng mạ thiếc chống ăn mòn, dây bện bọc nhựa PVC.</p>
+            <span class="category-link">Xem chi tiết nhóm sản phẩm →</span>
+          </div>
+
+          <div class="category-card" onclick="filterByCategory('luoi-inox')">
+            <div class="category-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M9 3v18"/><path d="M15 3v18"/></svg>
+            </div>
+            <h3>Lưới Inox Kỹ Thuật</h3>
+            <p>Lưới dệt inox 304 / 316 độ mesh cao (lọc sơn, lọc hóa chất), lưới hàn inox, lưới chống côn trùng công nghiệp, lưới đột lỗ kim loại.</p>
+            <span class="category-link">Xem chi tiết nhóm sản phẩm →</span>
+          </div>
+
+          <div class="category-card" onclick="filterByCategory('dong-ma')">
+            <div class="category-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+            </div>
+            <h3>Đồng Mạ Dẫn Điện</h3>
+            <p>Đồng thanh cái mạ thiếc, lá đồng mạ bạc/niken cho hệ thống phân phối điện MSB/DB, hạn chế hồ quang và tăng khả năng tiếp xúc.</p>
+            <span class="category-link">Xem chi tiết nhóm sản phẩm →</span>
+          </div>
+
+          <div class="category-card" onclick="filterByCategory('gia-cong')">
+            <div class="category-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <h3>Gia Công Theo Yêu Cầu</h3>
+            <p>Dập ép cosse đồng bện nguyên khối theo bản vẽ thiết kế, khoan đột lỗ bu lông, cắt cuộn lưới theo khổ yêu cầu nhà xưởng.</p>
+            <span class="category-link">Gửi bản vẽ nhận báo giá →</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="products-section" id="san-pham">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-kicker">Sản phẩm tiêu biểu</span>
+            <h2 class="section-title">Quy cách & Sản phẩm nổi bật</h2>
+          </div>
+          <p class="section-desc">Được chế tạo từ nguồn nguyên liệu chọn lọc, đáp ứng đầy đủ yêu cầu khắt khe về dẫn điện và cơ học.</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-tabs">
+          <button class="filter-btn active" onclick="filterProducts('all')">Tất cả sản phẩm</button>
+          <button class="filter-btn" onclick="filterProducts('day-ben-dong')">Dây Bện Đồng</button>
+          <button class="filter-btn" onclick="filterProducts('luoi-inox')">Lưới Inox</button>
+          <button class="filter-btn" onclick="filterProducts('dong-ma')">Đồng Mạ</button>
+          <button class="filter-btn" onclick="filterProducts('gia-cong')">Gia công theo yêu cầu</button>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="product-grid" id="productGrid">
+          <!-- P1 -->
+          <div class="product-card" data-category="day-ben-dong" data-keywords="day dong ben tiep dia tran ma thiec chong set">
+            <div class="product-visual">
+              <span class="product-badge copper-badge">Đồng Cu 99.9%</span>
+              <svg class="product-graphic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 3v18"/><path d="M3 12h18"/><circle cx="12" cy="12" r="5"/></svg>
+            </div>
+            <div class="product-body">
+              <span class="product-cat-name">Dây Bện Đồng</span>
+              <h3 class="product-title">Dây đồng bện tiếp địa (Trần & Mạ thiếc)</h3>
+              <p class="product-desc">Dùng cho hệ thống tiếp địa chống sét trạm biến áp, tủ điện và liên kết khử tĩnh điện đường ống bồn bể.</p>
+              <div class="product-specs">
+                <strong>Quy cách:</strong> 4mm² - 120mm² · Sợi mềm co giãn cao
+              </div>
+              <div class="product-footer">
+                <span class="price-callout">Báo giá theo mét / cuộn</span>
+                <button class="btn-card-action" onclick="openProductModal('p1')">Chi tiết & Báo giá</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- P2 -->
+          <div class="product-card" data-category="day-ben-dong gia-cong" data-keywords="thanh cai dong mem flexible shunt ep cosse hai dau">
+            <div class="product-visual">
+              <span class="product-badge copper-badge">Gia công ép cosse</span>
+              <svg class="product-graphic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="7" width="20" height="10" rx="3"/><line x1="6" y1="7" x2="6" y2="17"/><line x1="18" y1="7" x2="18" y2="17"/></svg>
+            </div>
+            <div class="product-body">
+              <span class="product-cat-name">Dây Bện Đồng & Gia Công</span>
+              <h3 class="product-title">Thanh cái đồng mềm (Flexible Copper Shunts)</h3>
+              <p class="product-desc">Thanh nối mềm triệt tiêu rung chấn giữa máy biến áp và thanh cái cứng tủ điện MSB, tăng tuổi thọ đấu nối.</p>
+              <div class="product-specs">
+                <strong>Gia công:</strong> Ép cosse đặc 2 đầu, đột lỗ theo bản vẽ
+              </div>
+              <div class="product-footer">
+                <span class="price-callout">Gia công theo bản vẽ</span>
+                <button class="btn-card-action" onclick="openProductModal('p2')">Chi tiết & Báo giá</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- P3 -->
+          <div class="product-card" data-category="day-ben-dong" data-keywords="day dong ben boc nhua pvc cach dien chong am">
+            <div class="product-visual">
+              <span class="product-badge copper-badge">Bọc PVC bảo vệ</span>
+              <svg class="product-graphic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="8" width="18" height="8" rx="4"/><path d="M7 8v8"/><path d="M17 8v8"/></svg>
+            </div>
+            <div class="product-body">
+              <span class="product-cat-name">Dây Bện Đồng</span>
+              <h3 class="product-title">Dây bện đồng bọc nhựa PVC cách điện</h3>
+              <p class="product-desc">Lớp vỏ nhựa PVC bảo vệ lõi đồng khỏi tác động ăn mòn hóa chất, hơi muối biển và va đập cơ học trong nhà máy xưởng.</p>
+              <div class="product-specs">
+                <strong>Vỏ bọc:</strong> PVC trong suốt hoặc vàng xanh tiếp địa
+              </div>
+              <div class="product-footer">
+                <span class="price-callout">Liên hệ báo giá</span>
+                <button class="btn-card-action" onclick="openProductModal('p3')">Chi tiết & Báo giá</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- P4 -->
+          <div class="product-card" data-category="luoi-inox" data-keywords="luoi det inox 304 316 loc son hoa chat dau mesh">
+            <div class="product-visual">
+              <span class="product-badge inox-badge">Inox 304 / 316</span>
+              <svg class="product-graphic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M9 3v18"/><path d="M15 3v18"/></svg>
+            </div>
+            <div class="product-body">
+              <span class="product-cat-name">Lưới Inox Kỹ Thuật</span>
+              <h3 class="product-title">Lưới dệt Inox 304 / 316 (Lọc mịn)</h3>
+              <p class="product-desc">Ứng dụng lọc sơn, lọc cặn dầu khí, hóa chất, chế biến thực phẩm, chịu nhiệt độ cao và không bị rỉ sét.</p>
+              <div class="product-specs">
+                <strong>Độ mịn:</strong> Từ 10 mesh đến 400 mesh · Khổ 1m, 1.2m
+              </div>
+              <div class="product-footer">
+                <span class="price-callout">Cắt bán theo m² / cuộn</span>
+                <button class="btn-card-action" onclick="openProductModal('p4')">Chi tiết & Báo giá</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- P5 -->
+          <div class="product-card" data-category="luoi-inox" data-keywords="luoi han inox cong nghiep chuong trai sang khoang san">
+            <div class="product-visual">
+              <span class="product-badge inox-badge">Inox hàn cường lực</span>
+              <svg class="product-graphic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="1"/><line x1="8" y1="3" x2="8" y2="21"/><line x1="16" y1="3" x2="16" y2="21"/><line x1="3" y1="8" x2="21" y2="8"/><line x1="3" y1="16" x2="21" y2="16"/></svg>
+            </div>
+            <div class="product-body">
+              <span class="product-cat-name">Lưới Inox Kỹ Thuật</span>
+              <h3 class="product-title">Lưới hàn Inox 304 công nghiệp</h3>
+              <p class="product-desc">Kết cấu mối hàn điện trở kiên cố, bề mặt phẳng, ứng dụng làm hàng rào an toàn máy móc, vách ngăn và giá kệ kho.</p>
+              <div class="product-specs">
+                <strong>Ô lưới:</strong> 10x10mm đến 50x50mm · Sợi phi 1mm - 4mm
+              </div>
+              <div class="product-footer">
+                <span class="price-callout">Báo giá theo kích thước</span>
+                <button class="btn-card-action" onclick="openProductModal('p5')">Chi tiết & Báo giá</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- P6 -->
+          <div class="product-card" data-category="luoi-inox gia-cong" data-keywords="luoi dot lo inox duc lo tron oval sang rung">
+            <div class="product-visual">
+              <span class="product-badge inox-badge">Đột dập CNC</span>
+              <svg class="product-graphic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8" cy="8" r="1.5"/><circle cx="16" cy="8" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="8" cy="16" r="1.5"/><circle cx="16" cy="16" r="1.5"/></svg>
+            </div>
+            <div class="product-body">
+              <span class="product-cat-name">Lưới Inox & Gia Công</span>
+              <h3 class="product-title">Tấm Inox đột lỗ (Đục lỗ tròn, lỗ dài)</h3>
+              <p class="product-desc">Sử dụng cho sàng rung nông sản, sàng tuyển khoáng sản, tấm bảo vệ cách âm và thiết bị xử lý khí thải công nghiệp.</p>
+              <div class="product-specs">
+                <strong>Độ dày:</strong> 0.5mm - 5.0mm · Lỗ 1mm - 20mm
+              </div>
+              <div class="product-footer">
+                <span class="price-callout">Gia công theo quy cách</span>
+                <button class="btn-card-action" onclick="openProductModal('p6')">Chi tiết & Báo giá</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- P7 -->
+          <div class="product-card" data-category="dong-ma" data-keywords="dong thanh cai ma thiec tin plated busbar tu dien msb">
+            <div class="product-visual">
+              <span class="product-badge copper-badge">Mạ thiếc tiêu chuẩn</span>
+              <svg class="product-graphic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polygon points="12 2 20 7 20 17 12 22 4 17 4 7 12 2"/><line x1="12" y1="22" x2="12" y2="12"/><line x1="20" y1="7" x2="12" y2="12"/><line x1="4" y1="7" x2="12" y2="12"/></svg>
+            </div>
+            <div class="product-body">
+              <span class="product-cat-name">Đồng Mạ Dẫn Điện</span>
+              <h3 class="product-title">Thanh cái đồng mạ thiếc (Tin-Plated Busbar)</h3>
+              <p class="product-desc">Bề mặt mạ thiếc bóng bảo vệ đồng khỏi tác động ẩm mốc, tăng cường diện tích tiếp xúc điện và chống phóng tia lửa.</p>
+              <div class="product-specs">
+                <strong>Kích thước:</strong> Bản 15mm - 120mm · Dày 2mm - 12mm
+              </div>
+              <div class="product-footer">
+                <span class="price-callout">Báo giá theo kg / thanh</span>
+                <button class="btn-card-action" onclick="openProductModal('p7')">Chi tiết & Báo giá</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- P8 -->
+          <div class="product-card" data-category="dong-ma gia-cong" data-keywords="la dong ma bac ma thiec tan nhiet dan dong cao">
+            <div class="product-visual">
+              <span class="product-badge copper-badge">Mạ bạc / Thiếc</span>
+              <svg class="product-graphic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <div class="product-body">
+              <span class="product-cat-name">Đồng Mạ & Gia Công</span>
+              <h3 class="product-title">Lá đồng mềm mạ dẫn điện (Lá đồng xếp lớp)</h3>
+              <p class="product-desc">Ghép từ nhiều lớp lá đồng mỏng 0.1mm - 0.5mm mạ thiếc/bạc, hàn ép áp lực ở hai đầu, chuyên dùng cho máy hàn điểm và biến áp.</p>
+              <div class="product-specs">
+                <strong>Ưu điểm:</strong> Độ mềm dẻo tuyệt đối, dẫn dòng cực lớn
+              </div>
+              <div class="product-footer">
+                <span class="price-callout">Gia công theo bản vẽ</span>
+                <button class="btn-card-action" onclick="openProductModal('p8')">Chi tiết & Báo giá</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Custom Fabrication Capacity (Làm theo đúng yêu cầu) -->
+    <section class="custom-section" id="gia-cong">
+      <div class="container">
+        <div class="custom-inner">
+          <div class="custom-info">
+            <span class="eyebrow">Năng lực xưởng</span>
+            <h2>Làm theo đúng yêu cầu<br><span>Chuẩn xác từng milimet</span></h2>
+            <p>
+              Bình Hưng Industrial trang bị hệ thống máy ép cosse thủy lực, máy cắt dệt lưới và xưởng gia công mạ bề mặt. Chúng tôi cam kết gia công đúng 100% theo bản vẽ và bảng quy cách kỹ thuật từ quý doanh nghiệp.
+            </p>
+
+            <div class="custom-steps">
+              <div class="step-box">
+                <span class="step-num">1</span>
+                <h4>Tiếp nhận bản vẽ / Quy cách</h4>
+                <p>Khách hàng gửi thông số tiết diện, chiều dài, loại lỗ bắt bu lông hoặc mẫu thực tế.</p>
+              </div>
+              <div class="step-box">
+                <span class="step-num">2</span>
+                <h4>Tư vấn & Báo giá tối ưu</h4>
+                <p>Kỹ sư rà soát vật liệu phù hợp và gửi bảng giá cạnh tranh trong vòng 30 phút.</p>
+              </div>
+              <div class="step-box">
+                <span class="step-num">3</span>
+                <h4>Gia công & Kiểm tra KCS</h4>
+                <p>Gia công trên dây chuyền ép khuôn chính xác, thử tải dẫn điện và kiểm tra kích thước.</p>
+              </div>
+              <div class="step-box">
+                <span class="step-num">4</span>
+                <h4>Giao hàng kèm chứng chỉ</h4>
+                <p>Đóng gói chuẩn công nghiệp, giao hàng tận nơi kèm hồ sơ CO/CQ đầy đủ.</p>
+              </div>
+            </div>
+
+            <a class="btn btn-copper" href="#bao-gia">Gửi Bản Vẽ / Yêu Cầu Kỹ Thuật ↗</a>
+          </div>
+
+          <div style="background: rgba(255,255,255,0.05); padding: 28px; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.15);">
+            <h3 style="font-size: 18px; color: #fb923c; margin-bottom: 16px;">Bảng khả năng gia công nhanh:</h3>
+            <table style="width: 100%; border-collapse: collapse; font-size: 13px; color: #cbd5e1;">
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                <td style="padding: 10px 0; font-weight: 700; color: white;">Dây đồng bện:</td>
+                <td style="padding: 10px 0;">Tiết diện từ 4mm² đến 300mm², ép đầu cosse M6 - M20</td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                <td style="padding: 10px 0; font-weight: 700; color: white;">Lưới Inox:</td>
+                <td style="padding: 10px 0;">Cắt khổ theo yêu cầu, viền nẹp khung inox, đột lỗ định hình</td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                <td style="padding: 10px 0; font-weight: 700; color: white;">Đồng mạ:</td>
+                <td style="padding: 10px 0;">Mạ thiếc bóng, mạ thiếc mờ, mạ bạc, mạ niken chiều dày theo chuẩn</td>
+              </tr>
+              <tr>
+                <td style="padding: 10px 0; font-weight: 700; color: white;">Thời gian gia công:</td>
+                <td style="padding: 10px 0; color: #fed7aa; font-weight: 700;">Hỗ trợ đơn hàng gấp trong 24h - 48h</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RFQ Direct Quotation Form Section -->
+    <section class="rfq-section" id="bao-gia">
+      <div class="container">
+        <div class="rfq-container">
+          <!-- Side Info -->
+          <div class="rfq-side-info">
+            <div>
+              <span class="section-kicker" style="color: #fb923c;">Tiếp nhận 24/7</span>
+              <h3>Yêu cầu báo giá nhanh</h3>
+              <p>Điền thông tin và quy cách cần gia công. Đội ngũ kỹ thuật kinh doanh Bình Hưng sẽ liên hệ và báo giá chi tiết nhanh chóng.</p>
+              
+              <ul class="rfq-benefit-list">
+                <li class="rfq-benefit-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  Báo giá trực tiếp từ xưởng không qua trung gian
+                </li>
+                <li class="rfq-benefit-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  Hỗ trợ tư vấn thông số vật liệu phù hợp công trình
+                </li>
+                <li class="rfq-benefit-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  Cung cấp mẫu thử và hồ sơ chứng chỉ chất lượng
+                </li>
+              </ul>
+            </div>
+
+            <div class="rfq-direct-hotline">
+              <small>CẦN TƯ VẤN KỸ THUẬT NGAY?</small>
+              <strong>Gọi Hotline / Zalo: 090x.xxx.xxx</strong>
+            </div>
+          </div>
+
+          <!-- Form Area -->
+          <div class="rfq-form-wrap">
+            <form id="rfqForm" onsubmit="handleRfqSubmit(event)">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="rfqName">Họ và tên / Người liên hệ <span>*</span></label>
+                  <input type="text" id="rfqName" class="form-control" placeholder="Nguyễn Văn A" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="rfqPhone">Số điện thoại / Zalo <span>*</span></label>
+                  <input type="tel" id="rfqPhone" class="form-control" placeholder="0901 234 567" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="rfqCompany">Tên công ty / Dự án</label>
+                  <input type="text" id="rfqCompany" class="form-control" placeholder="Công ty TNHH Cơ Điện ABC">
+                </div>
+
+                <div class="form-group">
+                  <label for="rfqProductCategory">Nhóm sản phẩm cần báo giá <span>*</span></label>
+                  <select id="rfqProductCategory" class="form-control" required>
+                    <option value="Dây Bện Đồng">Dây Bện Đồng (Tiếp địa / Thanh cái mềm)</option>
+                    <option value="Lưới Inox">Lưới Inox (Dệt / Hàn / Đột lỗ)</option>
+                    <option value="Đồng Mạ">Đồng Mạ (Thanh mạ thiếc / Lá mạ bạc)</option>
+                    <option value="Gia công theo bản vẽ">Gia công theo bản vẽ thiết kế</option>
+                  </select>
+                </div>
+
+                <div class="form-group col-span-2">
+                  <label for="rfqSpecs">Quy cách, số lượng & kích thước yêu cầu <span>*</span></label>
+                  <textarea id="rfqSpecs" class="form-control" placeholder="Ví dụ: Dây đồng bện 25mm2 dài 300mm ép cosse lỗ M10 hai đầu, số lượng 100 thanh..." required></textarea>
+                </div>
+
+                <div class="form-group col-span-2">
+                  <button type="submit" class="btn btn-copper" style="width: 100%; min-height: 48px; font-size: 15px;">
+                    GỬI YÊU CẦU BÁO GIÁ NGAY ↗
+                  </button>
+                  <p id="rfqSuccessMsg" style="display: none; color: #16a34a; font-size: 13px; font-weight: 700; text-align: center; margin-top: 8px;">
+                    ✓ Đã nhận yêu cầu! Đội ngũ Binh Hung Industrial sẽ liên hệ báo giá qua SĐT/Zalo trong ít phút.
+                  </p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Product Detail Modal -->
+  <div class="modal-backdrop" id="productModal" onclick="closeProductModal(event)">
+    <div class="modal-box" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <h3 id="modalTitle">Chi tiết sản phẩm</h3>
+        <button class="modal-close" onclick="closeProductModal()">✕</button>
+      </div>
+      <div class="modal-body">
+        <p id="modalDesc" style="font-size: 13.5px; color: var(--muted); margin-bottom: 16px;"></p>
+        <table class="modal-specs-table" id="modalTable">
+          <!-- Dynamic specs content -->
+        </table>
+        <div style="background: #fff7ed; padding: 12px; border-radius: 8px; border: 1px solid #fed7aa; font-size: 12px; color: #9a3412;">
+          <strong>Lưu ý:</strong> Binh Hung Industrial nhận gia công chiều dài, đột lỗ và xử lý bề mặt theo đúng kích thước thực tế của quý khách.
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline" onclick="closeProductModal()">Đóng</button>
+        <button class="btn btn-copper" id="modalQuoteBtn" onclick="selectProductForQuote()">Báo giá sản phẩm này ↗</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Contact Buttons -->
+  <div class="floating-contact">
+    <a href="https://zalo.me" target="_blank" rel="noopener" class="float-btn float-zalo" title="Chat Zalo ngay">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.08L2 22l5.08-1.34C8.54 21.52 10.23 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
+      Chat Zalo
+    </a>
+    <a href="tel:0900000000" class="float-btn float-hotline" title="Gọi Hotline">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Hotline Tư Vấn
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand">
+            <div class="brand-mark">BH</div>
+            <div class="brand-text">
+              <span class="brand-name">BINH HUNG INDUSTRIAL</span>
+              <span class="brand-sub">DÂY BỆN ĐỒNG · LƯỚI INOX · ĐỒNG MẠ</span>
+            </div>
+          </div>
+          <p class="footer-about">
+            Đơn vị uy tín chuyên sản xuất, cung ứng và gia công theo bản vẽ: Dây đồng bện tiếp địa, thanh cái mềm, lưới inox lọc kỹ thuật và thanh đồng mạ cho ngành công nghiệp điện, cơ khí và xây dựng.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Sản Phẩm Trọng Tâm</h4>
+          <ul>
+            <li><a href="#san-pham" onclick="filterProducts('day-ben-dong')">Dây đồng bện tiếp địa</a></li>
+            <li><a href="#san-pham" onclick="filterProducts('day-ben-dong')">Thanh cái đồng mềm (Shunts)</a></li>
+            <li><a href="#san-pham" onclick="filterProducts('luoi-inox')">Lưới dệt Inox 304 / 316</a></li>
+            <li><a href="#san-pham" onclick="filterProducts('luoi-inox')">Lưới inox hàn & đột lỗ</a></li>
+            <li><a href="#san-pham" onclick="filterProducts('dong-ma')">Đồng thanh cái mạ thiếc</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Dịch Vụ & Gia Công</h4>
+          <ul>
+            <li><a href="#gia-cong">Gia công ép cosse theo bản vẽ</a></li>
+            <li><a href="#gia-cong">Đột lỗ bản đồng & lưới inox</a></li>
+            <li><a href="#gia-cong">Mạ thiếc & mạ bạc chịu nhiệt</a></li>
+            <li><a href="#loi-the">Hồ sơ chứng chỉ CO/CQ</a></li>
+            <li><a href="#bao-gia">Chính sách giao hàng dự án</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Liên Hệ Trực Tiếp</h4>
+          <ul>
+            <li style="color: #cbd5e1;">📍 <strong>Văn phòng & Xưởng:</strong> TP. Hồ Chí Minh / Hà Nội</li>
+            <li style="color: #cbd5e1;">📞 <strong>Điện thoại:</strong> 090x.xxx.xxx</li>
+            <li style="color: #cbd5e1;">💬 <strong>Zalo kinh doanh:</strong> 090x.xxx.xxx</li>
+            <li style="color: #cbd5e1;">✉️ <strong>Email:</strong> kinhdoanh@binhhungindustrial.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <div>© <span id="year"></span> Binh Hung Industrial. Bản quyền thuộc về Binh Hung Industrial.</div>
+        <div>Sản xuất & Gia công kim khí công nghiệp: Dây Bện Đồng · Lưới Inox · Đồng Mạ</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Product Database for Modals
+    const productData = {
+      p1: {
+        title: "Dây đồng bện tiếp địa (Trần & Mạ thiếc)",
+        desc: "Dây đồng bện tiếp địa gồm nhiều sợi đồng nhỏ nguyên chất Cu 99.9% bện đan xen thành dải dẹt hoặc tròn, mang lại khả năng uốn gấp linh hoạt và độ dẫn điện cực cao.",
+        specs: [
+          ["Vật liệu", "Đồng đỏ nguyên chất Cu ≥ 99.9%"],
+          ["Bề mặt", "Trần hoặc mạ thiếc chống oxy hóa"],
+          ["Tiết diện thông dụng", "4mm², 6mm², 10mm², 16mm², 25mm², 35mm², 50mm², 70mm², 95mm², 120mm²"],
+          ["Ứng dụng", "Tiếp địa tủ bảng điện, chống sét công trình, tiếp địa cửa thang máng cáp, khử tĩnh điện bồn xăng dầu"]
+        ]
+      },
+      p2: {
+        title: "Thanh cái đồng mềm (Flexible Copper Shunts)",
+        desc: "Thanh cái mềm bện từ nhiều lớp dây đồng bện, hai đầu được ép cosse đặc nguyên khối bằng khuôn dập thủy lực không dùng chì hàn, đảm bảo truyền dẫn dòng tải lớn tối đa.",
+        specs: [
+          ["Quy cách đầu cực", "Ép cosse đặc, đột lỗ bu lông M6, M8, M10, M12, M16... theo bản vẽ"],
+          ["Khả năng dẫn dòng", "Từ 100A đến 4000A tùy thuộc tiết diện"],
+          ["Bề mặt tiếp xúc", "Mạ thiếc hoặc mạ bạc tăng độ tiếp xúc"],
+          ["Ứng dụng", "Khớp nối mềm máy biến áp, tủ phân phối MSB, liên kết thanh cái Busway triệt tiêu rung chấn"]
+        ]
+      },
+      p3: {
+        title: "Dây bện đồng bọc nhựa PVC cách điện",
+        desc: "Dây bện đồng được gia công bọc thêm lớp nhựa PVC dẻo, bảo vệ dây khỏi môi trường axit, kiềm, hơi muối và va quẹt cơ khí.",
+        specs: [
+          ["Chất liệu vỏ", "Nhựa PVC nguyên sinh dẻo dai, chống cháy lan"],
+          ["Màu sắc vỏ", "Trong suốt (thấy sợi bện), vàng xanh tiếp địa, đen"],
+          ["Độ cách điện", "600V - 1000V"],
+          ["Ứng dụng", "Tiếp địa trong môi trường ẩm ướt, phòng sạch, tàu thuyền hoặc đường ống hóa chất"]
+        ]
+      },
+      p4: {
+        title: "Lưới dệt Inox 304 / 316 (Lưới lọc mịn)",
+        desc: "Lưới dệt từ sợi inox SUS 304 hoặc SUS 316 chuẩn mác không rỉ, ô lưới đồng đều chuẩn xác, chịu được nhiệt độ cao và áp lực dòng chảy.",
+        specs: [
+          ["Mác thép", "Inox SUS 304, SUS 316 (chống ăn mòn axit)"],
+          ["Cỡ lưới (Mesh)", "10 mesh đến 400 mesh (lọc hạt từ milimet đến micromet)"],
+          ["Khổ cuộn", "Rộng 1.0m, 1.2m, 1.5m - Chiều dài cuộn 30m hoặc cắt lẻ"],
+          ["Ứng dụng", "Lọc sơn, lọc dầu khí, lọc cặn hóa chất, lưới sàng thực phẩm, dược phẩm"]
+        ]
+      },
+      p5: {
+        title: "Lưới hàn Inox 304 công nghiệp",
+        desc: "Lưới hàn được hàn tiếp điểm chập tự động từ các sợi inox đặc, không bong mối hàn khi cắt rời, bề mặt bóng sáng thẩm mỹ cao.",
+        specs: [
+          ["Mác inox", "SUS 304 hoặc 201"],
+          ["Kích thước ô lưới", "Ô vuông 10x10mm, 15x15mm, 20x20mm, 25x25mm, 50x50mm"],
+          ["Đường kính sợi", "1.0mm, 1.5mm, 2.0mm, 3.0mm, 4.0mm"],
+          ["Ứng dụng", "Hàng rào cách ly máy, lồng bảo vệ thiết bị cơ khí, khay sấy công nghiệp"]
+        ]
+      },
+      p6: {
+        title: "Tấm Inox đột lỗ kỹ thuật (Sàng đột dập)",
+        desc: "Tấm inox được đột dập bằng máy CNC tốc độ cao, khoảng cách lỗ đồng đều, mép lỗ nhẵn không ba-vớ.",
+        specs: [
+          ["Độ dày tấm", "Từ 0.5mm đến 6.0mm"],
+          ["Dạng lỗ đột", "Lỗ tròn, lỗ ovan (hạt xoài), lỗ lục giác, lỗ hoa mai"],
+          ["Đường kính lỗ", "Từ phi 0.8mm đến 30mm"],
+          ["Ứng dụng", "Sàng rung phân loại cà phê/gạo/tiêu, tấm tiêu âm công trình, mặt nạ máy quạt hút"]
+        ]
+      },
+      p7: {
+        title: "Thanh cái đồng mạ thiếc (Tin-Plated Busbar)",
+        desc: "Thanh đồng đỏ nguyên chất được mạ điện phân lớp thiếc dày đạt chuẩn, ngăn chặn hiện tượng đồng bị xỉn đen do tác động của khí oxy hóa.",
+        specs: [
+          ["Độ tinh khiết đồng", "Cu ≥ 99.95%"],
+          ["Độ dày lớp mạ", "Mạ thiếc 5μm - 15μm đồng đều các mặt"],
+          ["Kích thước thanh", "Chiều rộng 15mm - 160mm, dày 3mm - 15mm, dài 4m/thanh"],
+          ["Ứng dụng", "Thanh cái dẫn điện tủ hạ thế, tủ trung thế, trạm biến áp, tủ tụ bù"]
+        ]
+      },
+      p8: {
+        title: "Lá đồng mềm mạ dẫn điện (Lá đồng xếp lớp)",
+        desc: "Chế tạo bằng công nghệ hàn ép khuếch tán áp lực cao (Diffusion Welding) các lá đồng mỏng mạ thiếc/bạc, có tính linh hoạt tối đa khi máy móc vận hành liên tục.",
+        specs: [
+          ["Độ dày mỗi lá", "0.1mm - 0.3mm xếp nhiều lớp"],
+          ["Xử lý bề mặt", "Mạ bạc (Silver-plated) hoặc mạ thiếc (Tin-plated)"],
+          ["Đặc tính", "Triệt tiêu dao động cơ học, bù trừ giãn nở nhiệt cực tốt"],
+          ["Ứng dụng", "Máy hàn điểm điện trở, lò nung cảm ứng, bộ chỉnh lưu công suất lớn"]
+        ]
+      }
+    };
+
+    let currentSelectedProduct = "";
+
+    // Open Modal
+    function openProductModal(prodId) {
+      const data = productData[prodId];
+      if (!data) return;
+      currentSelectedProduct = data.title;
+      document.getElementById('modalTitle').textContent = data.title;
+      document.getElementById('modalDesc').textContent = data.desc;
+
+      const table = document.getElementById('modalTable');
+      table.innerHTML = data.specs.map(([k, v]) => `
+        <tr>
+          <th>${k}</th>
+          <td>${v}</td>
+        </tr>
+      `).join('');
+
+      document.getElementById('productModal').classList.add('is-active');
+    }
+
+    function closeProductModal(event) {
+      if (event && event.target !== document.getElementById('productModal') && !event.target.classList.contains('modal-close') && event.target.tagName !== 'BUTTON') {
+        return;
+      }
+      document.getElementById('productModal').classList.remove('is-active');
+    }
+
+    function selectProductForQuote() {
+      closeProductModal();
+      const rfqSpecs = document.getElementById('rfqSpecs');
+      const rfqCat = document.getElementById('rfqProductCategory');
+
+      if (currentSelectedProduct) {
+        rfqSpecs.value = `Yêu cầu báo giá cho: ${currentSelectedProduct}\n- Số lượng dự kiến: \n- Quy cách chi tiết: `;
+      }
+      document.getElementById('bao-gia').scrollIntoView({ behavior: 'smooth' });
+      rfqSpecs.focus();
+    }
+
+    // Filter Products by Category Tab
+    function filterProducts(category) {
+      const cards = document.querySelectorAll('.product-card');
+      const buttons = document.querySelectorAll('.filter-btn');
+
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event?.target?.classList?.add('active');
+
+      cards.forEach(card => {
+        if (category === 'all' || card.dataset.category.includes(category)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function filterByCategory(category) {
+      const targetBtn = Array.from(document.querySelectorAll('.filter-btn')).find(btn => 
+        (category === 'day-ben-dong' && btn.textContent.includes('Dây Bện Đồng')) ||
+        (category === 'luoi-inox' && btn.textContent.includes('Lưới Inox')) ||
+        (category === 'dong-ma' && btn.textContent.includes('Đồng Mạ')) ||
+        (category === 'gia-cong' && btn.textContent.includes('Gia công'))
+      );
+      if (targetBtn) {
+        targetBtn.click();
+      } else {
+        filterProducts(category);
+      }
+      document.getElementById('san-pham').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Search bar functionality
+    const searchForm = document.getElementById('searchForm');
+    const searchInput = document.getElementById('searchInput');
+
+    searchForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const query = searchInput.value.trim().toLowerCase();
+      if (!query) {
+        filterProducts('all');
+        return;
+      }
+
+      const cards = document.querySelectorAll('.product-card');
+      let found = false;
+
+      cards.forEach(card => {
+        const text = (card.textContent + ' ' + card.dataset.keywords).toLowerCase();
+        if (text.includes(query)) {
+          card.style.display = 'flex';
+          found = true;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      document.getElementById('san-pham').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    // Mobile Toggle
+    const mobileToggle = document.getElementById('mobileToggle');
+    const mainNav = document.getElementById('mainNav');
+    mobileToggle.addEventListener('click', () => {
+      const isOpen = mainNav.classList.toggle('is-open');
+      mobileToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    // Handle RFQ Submit
+    function handleRfqSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('rfqName').value;
+      const phone = document.getElementById('rfqPhone').value;
+      const cat = document.getElementById('rfqProductCategory').value;
+      const specs = document.getElementById('rfqSpecs').value;
+
+      const successMsg = document.getElementById('rfqSuccessMsg');
+      successMsg.style.display = 'block';
+
+      // Save to localStorage as a demonstration of RFQ capture
+      try {
+        const savedQuotes = JSON.parse(localStorage.getItem('bh_quotes') || '[]');
+        savedQuotes.push({ name, phone, cat, specs, time: new Date().toISOString() });
+        localStorage.setItem('bh_quotes', JSON.stringify(savedQuotes));
+      } catch (err) {
+        console.error(err);
+      }
+
+      setTimeout(() => {
+        e.target.reset();
+      }, 3000);
+    }
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
